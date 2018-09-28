@@ -10,13 +10,11 @@ export class OrganizationDetailsComponent implements OnInit {
   private sub: any;
   organization: string;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute) {}
 
   ngOnInit() {
-    try {
-      this.sub = this.route.params.subscribe(params => {
-        this.organization = params['id'];
-     });
+    this.sub = this.route.params.subscribe(params => {
+      this.organization = params['id'];
+    });
   }
-
 }
