@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'zazu-layout';
+  minimized = false;
+
+  toggleMenu() {
+    this.minimized = !this.minimized;
+    console.log('toggled');
+  }
+
+
 }
